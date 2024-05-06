@@ -104,7 +104,7 @@ class DartDeclaration {
       }
 
       if (isNullable && type != 'String') {
-        return '$name: $jsonVar != null && !$jsonVar.isEmpty ? $conversion : null';
+        return '$name: $jsonVar != null && $jsonVar.isNotEmpty ? $conversion : null';
       } else {
         return '$name: $conversion';
       }
